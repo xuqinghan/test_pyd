@@ -5,6 +5,9 @@ from Cython.Build import cythonize
 
 setup(
     name='Hello world app',
-    ext_modules=cythonize("hello.pyx"),
+    ext_modules=cythonize(["hello.pyx",
+                        'hello_py.py',
+                        ],
+                        annotate=True),
     zip_safe=False,
 )
